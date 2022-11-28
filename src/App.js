@@ -1,10 +1,19 @@
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+import Header from "./components/Header";
+import RouterConfig from "./config/RouterConfig";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <>
-      <h1>PRIMERA PARTE</h1>
-    </>
+    <div>
+      <BrowserRouter>
+        <>
+          <Header />
+          <RouterConfig />
+        </>
+      </BrowserRouter>
+    </div>
   );
 }
 

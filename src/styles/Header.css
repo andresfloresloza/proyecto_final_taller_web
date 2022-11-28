@@ -1,0 +1,26 @@
+.icono-menu {
+  width: 20%;
+  margin-left: 15px;
+  background-color: gray;
+}
+
+.navbar_principal {
+  background-color: gray;
+}
+
+.nav-item .nav-link {
+  width: 150px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-left: solid white;
+}
+
+.nav-item .nav-link:hover {
+  color: red;
+}
+
+a {
+  width: 100%;
+}

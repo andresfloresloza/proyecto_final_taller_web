@@ -1,0 +1,29 @@
+.contenedorPaginaPrincipal {
+  background: url("https://d29jy8ovkd5kcx.cloudfront.net/wp-content/uploads/2021/12/24170805/logistica-integrada.jpg");
+  opacity: 0.95;
+  width: 85%;
+  height: 50em;
+  position: relative;
+  box-shadow: 0 0.188em 1.55em rgb(37, 37, 37);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.contenedorSecundario {
+  position: absolute;
+  margin: 5rem;
+}
+
+p {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.li {
+  margin-left: 3rem;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}

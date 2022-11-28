@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  background: url("https://img.freepik.com/vector-gratis/fondo-curva-azul-claro_53876-99565.jpg?w=2000");
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icono {
+  height: 80vh;
+  width: 50%;
+}
+
+.icono-perfil {
+  height: 30%;
+  width: 30%;
+}
+
+.icono-form {
+  height: 45vh;
+  width: 60%;
+}
+
+.icono-google {
+  width: 65px;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 1em;
+  margin-bottom: 1em;
+}
+.icono_mapa {
+  width: 5%;
+}
+
+.contenedor {
+  background-color: rgb(161, 161, 161);
+  opacity: 0.95;
+  width: 35%;
+  height: 40em;
+  position: relative;
+  box-shadow: 0 0.188em 1.55em rgb(37, 37, 37);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.alt-login {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.alt-login2 {
+  width: auto;
+  height: auto;
+  display: flex;
+  margin-top: -2em;
+}
+.contenedorInput {
+  text-align: center;
+}
+.input {
+  border: none;
+  background-color: white;
+  height: 2.3em;
+  width: 80%;
+  border-radius: 2em;
+  text-align: start;
+  font-size: 25px;
+  padding-left: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+input:focus {
+  outline-color: rgb (32, 177, 255);
+}
+
+.login-btn {
+  height: 2.2em;
+  width: 80%;
+  border-radius: 2em;
+  background-color: rgb(0, 60, 255);
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+.login-btn:hover {
+  color: white;
+}
+
+.titulo {
+  color: white;
+  font-size: 25px;
+}
+
+.titulo2 {
+  color: rgb(0, 60, 255);
+  font-size: 25px;
+  font-weight: 700;
+  padding-left: 1em;
+  text-decoration: none;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Login.js */
+.login-btn_login {
+  height: 2.2em;
+  width: 80%;
+  border-radius: 2em;
+  background-color: rgb(0, 60, 255);
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 1em;
+  margin-left: 4.2rem;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* RegisterChofer.js */
+.contenedorChofer {
+  flex-direction: column;
+}
+.contenedorIndividual {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+}
+h2 {
+  margin-bottom: 1rem;
+}
+.inputChofer {
+  border: none;
+  background-color: white;
+  height: 2.3em;
+  width: 90%;
+  border-radius: 2em;
+  text-align: start;
+  font-size: 25px;
+  padding-left: 1.2em;
+  margin-bottom: 0.5em;
+}
+.login-btn_chofer {
+  height: 2.2em;
+  width: 90%;
+  border-radius: 2em;
+  background-color: rgb(0, 60, 255);
+  color: black;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 1em;
+}
+.login-btn_chofer:hover {
+  color: white;
+}
+.icono-perfil-chofer {
+  width: 25%;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* RegisterProveedor.js */
+.contenedorProveedor {
+  background-color: rgb(161, 161, 161);
+  opacity: 0.95;
+  width: 35%;
+  height: 35em;
+  position: relative;
+  box-shadow: 0 0.188em 1.55em rgb(37, 37, 37);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.icono-perfil_proveedor {
+  width: 32%;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.contenedorCliente {
+  background-color: rgb(161, 161, 161);
+  opacity: 0.95;
+  width: 35%;
+  height: 50em;
+  position: relative;
+  box-shadow: 0 0.188em 1.55em rgb(37, 37, 37);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
