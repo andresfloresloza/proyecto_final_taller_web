@@ -1,16 +1,45 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ROUTER_HOME, ROUTER_REGISTER_FORM } from "../../config/Constant";
+import axios from "axios";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { ROUTER_HOME } from "../../config/Constant";
+import { userLogin } from "../../redux/loginSlice";
 import "../../styles/LoginRegisterForm.css";
 import GoogleButton from "./SignInWithGoogle";
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
+  const history = useNavigate();
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const iniciarSesion = () => {
+    const url = "https://localhost:7272/api/security/login";
+    const params = {
+      username,
+      password,
+    };
+
+    axios
+      .post(url, params)
+      .then((response) => {
+        const token = response.data.jwt;
+        dispatch(userLogin(token));
+        history(ROUTER_HOME);
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="page">
       <img
         className="icono"
         src={require("../../assets/logotipo.png")}
-        alt="Pais Bolivia"
+        alt="Proyecto"
       />
       <div className="contenedor">
         <img
@@ -22,10 +51,27 @@ const LoginForm = () => {
           <input
             className="input"
             type="text"
-            placeholder="Correo Electronico..."
+            value={username}
+            onChange={(e) => {
+              setUsername(e.target.value);
+            }}
+            placeholder="UserName..."
           />
-          <input className="input" type="text" placeholder="Contraseña..." />
-          <Link className="login-btn_login" to={ROUTER_HOME}>
+          <input
+            className="input"
+            type="password"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+            placeholder="Contraseña..."
+          />
+          <Link
+            className="login-btn_login"
+            onClick={() => {
+              iniciarSesion();
+            }}
+          >
             Iniciar Sesion
           </Link>
         </div>

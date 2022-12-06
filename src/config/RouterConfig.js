@@ -16,8 +16,10 @@ import PerfilChofer from "../pages/perfil/PerfilChofer";
 import PerfilCliente from "../pages/perfil/PerfilCliente";
 import PerfilProveedor from "../pages/perfil/PerfilProveedor";
 import PerfilVendedor from "../pages/perfil/PerfilVendedor";
+import ComprarProducto from "../pages/proveedores/CompraProducto";
 
 import {
+  ROUTER_COMPRAR_PRODUCTO,
   ROUTER_HOME,
   ROUTER_INITIAL,
   ROUTER_LISTA_ALMACENES,
@@ -173,6 +175,14 @@ const RouterConfig = () => {
         element={
           <>
             <PerfilChofer />
+          </>
+        }
+      />
+      <Route
+        path={ROUTER_COMPRAR_PRODUCTO}
+        element={
+          <>
+            <ComprarProducto />
           </>
         }
       />

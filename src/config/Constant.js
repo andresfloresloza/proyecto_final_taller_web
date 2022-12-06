@@ -18,3 +18,5 @@ export const ROUTER_PERFIL_CLIENTE = "/perfilCliente";
 export const ROUTER_PERFIL_VENDEDOR = "/perfilVendedor";
 export const ROUTER_PERFIL_PROVEEDOR = "/perfilProveedor";
 export const ROUTER_PERFIL_CHOFER = "/perfilChofer";
+
+export const ROUTER_COMPRAR_PRODUCTO = "/comprarProducto";

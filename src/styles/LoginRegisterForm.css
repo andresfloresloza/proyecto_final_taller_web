@@ -17,7 +17,6 @@
 }
 
 .icono-perfil {
-  height: 30%;
   width: 30%;
 }
 
@@ -134,6 +133,9 @@ input:focus {
   margin-bottom: 1em;
   margin-left: 4.2rem;
 }
+.login-btn_login:hover {
+  color: white;
+}
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* RegisterChofer.js */
 .contenedorChofer {
@@ -186,7 +188,7 @@ h2 {
   background-color: rgb(161, 161, 161);
   opacity: 0.95;
   width: 35%;
-  height: 35em;
+  height: 45em;
   position: relative;
   box-shadow: 0 0.188em 1.55em rgb(37, 37, 37);
   display: flex;

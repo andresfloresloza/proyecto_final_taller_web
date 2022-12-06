@@ -34,21 +34,21 @@ p {
   font-size: 27px;
 }
 /* PerfilCliente */
-.contenedorCliente2 {
+.contenedorCliente1 {
   height: 35em;
 }
 
 /* PerfilProveedor */
-.contenedorProveedor2 {
+.contenedorProveedor1 {
   height: 20em;
 }
 
 /* PerfilVendedor */
-.contenedorVendedor2 {
+.contenedorVendedor1 {
   height: 30em;
 }
 
 /* PerfilChofer */
-.contenedorChofer2 {
+.contenedorChofer1 {
   height: 45em;
 }
