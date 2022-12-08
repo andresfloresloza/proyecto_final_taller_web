@@ -1,8 +1,53 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../../styles/CompraProducto.css";
 
 const ComprarProducto = () => {
+  const [listaProveedores, setListaProveedores] = useState([]);
+  const [listaProductos, setListaProductos] = useState([]);
+  const token = useSelector((state) => state.login.token);
+
+  useEffect(() => {
+    getProveedores();
+    getProductos();
+  }, []);
+
+  const getProveedores = () => {
+    const url = "https://localhost:7272/api/proveedor/search";
+    axios
+      .get(url, {
+        headers: {
+          Authorization: `JWT ${token}`,
+        },
+      })
+      .then((response) => {
+        console.log(response);
+        setListaProveedores(response.data);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  };
+
+  const getProductos = () => {
+    const url = "https://localhost:7272/api/producto/search";
+    axios
+      .get(url, {
+        headers: {
+          Authorization: `JWT ${token}`,
+        },
+      })
+      .then((response) => {
+        console.log(response);
+        setListaProductos(response.data);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  };
+
   return (
     <div className="page">
       <div className="contenedorCompra1">
@@ -10,16 +55,17 @@ const ComprarProducto = () => {
         <div className="contenedorInputCompra">
           <select className="inputProveedor">
             <option>-- Selecciona el Proveedor --</option>
+            {listaProveedores.map((link) => (
+              <option>{link.nombre}</option>
+            ))}
           </select>
         </div>
         <div className="contenedorInputCompra">
           <select className="inputProducto">
             <option>-- Selecciona un Producto --</option>
-            <option>opcion 1</option>
-            <option>opcion 2</option>
-            <option>opcion 3</option>
-            <option>opcion 4</option>
-            <option>opcion 5</option>
+            {listaProductos.map((link) => (
+              <option>{link.nombre}</option>
+            ))}
           </select>
           <label className="label">Cantidad: </label>
           <input className="inputCantidad" type="number" placeholder="0" />

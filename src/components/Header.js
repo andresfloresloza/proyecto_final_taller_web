@@ -9,6 +9,7 @@ import {
   ROUTER_LISTA_ALMACENES,
   ROUTER_LISTA_CHOFERES,
   ROUTER_LISTA_CLIENTES,
+  ROUTER_LISTA_PRODUCTOS,
   ROUTER_LISTA_PROVEEDORES,
   ROUTER_LISTA_VENDEDORES,
   ROUTER_LOGIN_FORM,
@@ -17,6 +18,7 @@ import {
   ROUTER_REGISTER_ALMACEN,
   ROUTER_REGISTER_CHOFER,
   ROUTER_REGISTER_CLIENTE,
+  ROUTER_REGISTER_PRODUCTO,
   ROUTER_REGISTER_PROVEEDOR,
   ROUTER_REGISTER_VENDEDOR,
 } from "../config/Constant";
@@ -55,6 +57,14 @@ const Header = () => {
                 </NavDropdown>
                 <NavDropdown title="PEDIDOS">
                   <Link className="dropdown-item">LISTA PEDIDOS</Link>
+                </NavDropdown>
+                <NavDropdown title="PRODUCTOS">
+                  <Link className="dropdown-item" to={ROUTER_REGISTER_PRODUCTO}>
+                    CREAR PRODUCTO
+                  </Link>
+                  <Link className="dropdown-item" to={ROUTER_LISTA_PRODUCTOS}>
+                    LISTA DE PRODUCTOS
+                  </Link>
                 </NavDropdown>
                 <NavDropdown title="USUARIOS">
                   <Link className="dropdown-item" to={ROUTER_REGISTER_CLIENTE}>

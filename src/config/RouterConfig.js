@@ -4,12 +4,14 @@ import LoginForm from "../pages/auth/LoginForm";
 import RegisterAlmacen from "../pages/auth/RegisterAlmacen";
 import RegisterChofer from "../pages/auth/RegisterChofer";
 import RegisterCliente from "../pages/auth/RegisterCliente";
+import RegisterProducto from "../pages/auth/RegisterProducto";
 import RegisterProveedor from "../pages/auth/RegisterProveedor";
 import RegisterVendedor from "../pages/auth/RegisterVendedor";
 import HomePageAdministrador from "../pages/home/HomePageAdministrador";
 import ListaAlmacenes from "../pages/lista/ListaAlmacenes";
 import ListaChoferes from "../pages/lista/ListaChoferes";
 import ListaClientes from "../pages/lista/ListaClientes";
+import ListaProductos from "../pages/lista/ListaProductos";
 import ListaProveedores from "../pages/lista/ListaProveedores";
 import ListaVendedores from "../pages/lista/ListaVendedores";
 import PerfilChofer from "../pages/perfil/PerfilChofer";
@@ -25,6 +27,7 @@ import {
   ROUTER_LISTA_ALMACENES,
   ROUTER_LISTA_CHOFERES,
   ROUTER_LISTA_CLIENTES,
+  ROUTER_LISTA_PRODUCTOS,
   ROUTER_LISTA_PROVEEDORES,
   ROUTER_LISTA_VENDEDORES,
   ROUTER_LOGIN_FORM,
@@ -35,6 +38,7 @@ import {
   ROUTER_REGISTER_ALMACEN,
   ROUTER_REGISTER_CHOFER,
   ROUTER_REGISTER_CLIENTE,
+  ROUTER_REGISTER_PRODUCTO,
   ROUTER_REGISTER_PROVEEDOR,
   ROUTER_REGISTER_VENDEDOR,
 } from "./Constant";
@@ -107,6 +111,14 @@ const RouterConfig = () => {
         }
       />
       <Route
+        path={ROUTER_REGISTER_PRODUCTO}
+        element={
+          <>
+            <RegisterProducto />
+          </>
+        }
+      />
+      <Route
         path={ROUTER_LISTA_CLIENTES}
         element={
           <>
@@ -143,6 +155,14 @@ const RouterConfig = () => {
         element={
           <>
             <ListaAlmacenes />
+          </>
+        }
+      />
+      <Route
+        path={ROUTER_LISTA_PRODUCTOS}
+        element={
+          <>
+            <ListaProductos />
           </>
         }
       />

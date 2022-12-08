@@ -8,6 +8,9 @@ export const ROUTER_REGISTER_PROVEEDOR = "/registerProveedor";
 export const ROUTER_REGISTER_CHOFER = "/registerChofer";
 export const ROUTER_REGISTER_ALMACEN = "/registerAlmacen";
 
+export const ROUTER_REGISTER_PRODUCTO = "/registerProducto";
+export const ROUTER_LISTA_PRODUCTOS = "/listaProductos";
+
 export const ROUTER_LISTA_CLIENTES = "/listaClientes";
 export const ROUTER_LISTA_VENDEDORES = "/listaVendedores";
 export const ROUTER_LISTA_PROVEEDORES = "/listaProveedores";

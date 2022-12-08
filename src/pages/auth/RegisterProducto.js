@@ -5,18 +5,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { ROUTER_HOME, ROUTER_LOGIN_FORM } from "../../config/Constant";
 import "../../styles/LoginRegisterForm.css";
 
-const RegisterProveedor = () => {
+const RegisterProducto = () => {
   const token = useSelector((state) => state.login.token);
   const history = useNavigate();
 
-  const [nombre, setNombre] = useState("");
-  const [ubicacion, setUbicacion] = useState("");
+  const [nombreProducto, setNombreProducto] = useState("");
+  const [stock, setStock] = useState("");
+  const [precio, setPrecio] = useState("");
 
   const registerProveedor = () => {
-    const url = "https://localhost:7272/api/proveedor";
+    const url = "https://localhost:7272/api/producto";
     const params = {
-      nombre,
-      ubicacion,
+      nombreProducto,
+      stock,
+      precio,
     };
 
     axios
@@ -42,40 +44,43 @@ const RegisterProveedor = () => {
         alt="Logo Principal"
       />
       <div className="contenedorProveedor">
-        <img
-          className="icono-perfil_proveedor"
-          src={require("../../assets/icon perfil.png")}
-          alt="icono-perfil"
-        />
+        <h2>FORMULARIO PRODUCTO</h2>
         <div className="contenedorInput">
           <input
             className="input"
             type="text"
-            value={nombre}
+            value={nombreProducto}
             required
-            onChange={(e) => setNombre(e.target.value)}
-            placeholder="Nombre Completo..."
+            onChange={(e) => setNombreProducto(e.target.value)}
+            placeholder="Nombre del Producto..."
+          />
+          <input
+            className="input"
+            type="number"
+            value={stock}
+            required
+            onChange={(e) => setStock(e.target.value)}
+            placeholder="Stock..."
           />
           <input
             className="input"
             type="text"
-            value={ubicacion}
+            value={precio}
             required
-            onChange={(e) => setUbicacion(e.target.value)}
-            placeholder="Direccion..."
+            onChange={(e) => setPrecio(e.target.value)}
+            placeholder="Precio..."
           />
-
           <Link
             className="login-btn_login"
             onClick={() => {
               registerProveedor();
             }}
           >
-            Registrate
+            Registrar Producto
           </Link>
         </div>
       </div>
     </div>
   );
 };
-export default RegisterProveedor;
+export default RegisterProducto;
